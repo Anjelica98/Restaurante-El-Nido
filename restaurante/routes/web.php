@@ -3,7 +3,7 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CustomerController;
-
+use App\Http\Controllers\ReservationController;
 Route::get('/', function () {
     return view('welcome');
 });
@@ -12,7 +12,8 @@ Route::get(('/home'), function () {
     return view('home');     //función que retorna la vista home.blade.php, que es la página principal del admin
 })->middleware(['auth'])->name('home');
 
-
+//ruta del cliente para crear una reserva
+Route::get('/reserve', [ReservationController::class, 'create'])->name('reservation'); //17/10/25 ruta funciona
 
 //ruta de crud relacionado con los clientes
 Route::resource('customers', CustomerController::class)->middleware('auth');
