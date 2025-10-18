@@ -14,6 +14,12 @@ Route::get(('/home'), function () {
 
 //ruta del cliente para crear una reserva
 Route::get('/reserve', [ReservationController::class, 'create'])->name('reservation'); //17/10/25 ruta funciona
+Route::post('/reserve', [ReservationController::class, 'store'])->name('reservations.store');
+
+//ruta de contacto con la empresa
+Route::get('/contacto', function () {
+    return view('contact'); //18/10/25 la ruta funciona
+});
 
 //ruta de crud relacionado con los clientes
 Route::resource('customers', CustomerController::class)->middleware('auth');
