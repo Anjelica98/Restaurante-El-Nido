@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\contactFormController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CustomerController;
@@ -12,14 +13,19 @@ Route::get(('/home'), function () {
     return view('home');     //función que retorna la vista home.blade.php, que es la página principal del admin
 })->middleware(['auth'])->name('home');
 
+
+//ruta del cliente o guest que ve el frontend
+Route::get('/guest', function () {
+    return view('guest');
+});
+
 //ruta del cliente para crear una reserva
 Route::get('/reserve', [ReservationController::class, 'create'])->name('reservation'); //17/10/25 ruta funciona
 Route::post('/reserve', [ReservationController::class, 'store'])->name('reservations.store');
 
 //ruta de contacto con la empresa
-Route::get('/contacto', function () {
-    return view('contact'); //18/10/25 la ruta funciona
-});
+Route::get('/contacto',[contactFormController::class,'create'])->name('contact.create');
+Route::post('/contacto',[contactFormController::class,'store'])->name('contact.store');
 
 //ruta de crud relacionado con los clientes
 Route::resource('customers', CustomerController::class)->middleware('auth');
