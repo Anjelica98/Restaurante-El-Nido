@@ -8,6 +8,10 @@ use App\Http\Controllers\ReservationController;
 Route::get('/', function () {
     return view('welcome');
 });
+//ruta que conduce al login para no tener los botones de regsitro
+Route::get('/private', function(){
+    return view('private');
+})->name('private');
 
 Route::get(('/home'), function () {
     return view('home');     //función que retorna la vista home.blade.php, que es la página principal del admin
@@ -17,7 +21,11 @@ Route::get(('/home'), function () {
 //ruta del cliente o guest que ve el frontend
 Route::get('/guest', function () {
     return view('guest');
-});
+})->name('guest');
+//ruta del menu del restaurante
+Route::get('/menu', function () {
+    return view('menu');
+})->name('menu');
 
 //ruta del cliente para crear una reserva
 Route::get('/reserve', [ReservationController::class, 'create'])->name('reservation'); //17/10/25 ruta funciona

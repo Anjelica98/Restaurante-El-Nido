@@ -1,5 +1,6 @@
+@extends('nav')
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -33,6 +34,7 @@
     </style>
 </head>
 <body>
+  @section('content')
     <section class="wrap">
       <!-- Tabs -->
       <div class="tabs">
@@ -110,6 +112,7 @@
         </div>
       </div>
     </section>
+    @endsection
     <script>
       function showTab(tabId) {
         // Hide all sections

@@ -1,4 +1,5 @@
-<!DOCTYPE html>
+
+@extends('nav')<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -9,20 +10,9 @@
     <title>HOME GUEST | LANDING PAGE FOR CLIENTS</title>
 </head>
 <body>
-   <nav class="navbar navbar-expand-lg bg-body-tertiary">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">Navbar</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-      <div class="navbar-nav">
-        <a class="nav-link active" aria-current="page" href="#">Home</a>
-        <a class="nav-link" href="{{ route('contact.create') }}">Contacto</a>
-        <a class="nav-link" href="{{ route('login') }}">PRIVATE</a>
-      </div>
-    </div>
-  </div>
-</nav>
+
+ @section('content')
+<p>This is the default guest landing page.</p>
+  @endsection
 </body>
 </html>
