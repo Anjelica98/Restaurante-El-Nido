@@ -13,7 +13,7 @@
     <div class="register-photo">
         <div class="form-container">
         <div class="image-holder"></div><!--se estiliza en el css-->
-        <form action="" method="POST">       
+        <form action="{{ route('reservations.store')}}" method="POST">       
         @csrf 
             <h2 class="text-center">Make a <strong>Reservation</strong></h2>
             <div class="form-group"><input class="form-control" type="text" name="name" value="{{ old('name') }}">

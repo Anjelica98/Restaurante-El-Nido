@@ -14,4 +14,11 @@ class Reservation extends Model
         'reservation_time',
         'status'
     ];
+
+     protected $casts = [
+       
+        'reservation_time' => 'datetime', 
+    ];
 }
+
+ // protected casts son

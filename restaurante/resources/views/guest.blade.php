@@ -1,184 +1,19 @@
 
-@extends('nav')<!DOCTYPE html>
+@extends('nav')
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="{{ asset('css/guest.css') }}" rel="stylesheet" />  
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
     <title>HOME GUEST | LANDING PAGE FOR CLIENTS</title>
-    <style>
-    /* === Global Styles === */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    body {
-      font-family: 'Poppins', sans-serif;
-      color: #333;
-      line-height: 1.6;
-    }
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-    img {
-      width: 100%;
-      display: block;
-      border-radius: 10px;
-    }
-
-    /* === Hero Section === */
-    .hero {
-      height: 100vh;
-      background: url('https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
-      position: relative;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      color: white;
-    }
-    .hero::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: rgba(0, 0, 0, 0.6);
-    }
-    .hero-content {
-      position: relative;
-      z-index: 1;
-      max-width: 700px;
-      padding: 20px;
-    }
-    .hero h1 {
-      font-size: 3rem;
-      margin-bottom: 1rem;
-      letter-spacing: 1px;
-    }
-    .hero p {
-      font-size: 1.2rem;
-      margin-bottom: 2rem;
-    }
-    .hero a {
-      background: #c0392b;
-      padding: 12px 28px;
-      border-radius: 30px;
-      color: white;
-      font-weight: 500;
-      transition: background 0.3s ease;
-    }
-    .hero a:hover {
-      background: #a93226;
-    }
-
-    /* === About Section === */
-    .about {
-      background: #f9f9f9;
-      padding: 80px 20px;
-    }
-    .about-container {
-      max-width: 1100px;
-      margin: auto;
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      gap: 40px;
-    }
-    .about-text {
-      flex: 1;
-      min-width: 300px;
-    }
-    .about-text h2 {
-      font-size: 2.2rem;
-      margin-bottom: 20px;
-    }
-    .about-text p {
-      margin-bottom: 15px;
-      color: #555;
-    }
-    .about-img {
-      flex: 1;
-      min-width: 300px;
-    }
-
-    /* === Menu Section === */
-    .menu {
-      padding: 80px 20px;
-      text-align: center;
-    }
-    .menu h2 {
-      font-size: 2.2rem;
-      margin-bottom: 40px;
-    }
-    .menu-items {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 30px;
-    }
-    .menu-item {
-      background: #fff;
-      border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-      padding: 20px;
-      width: 280px;
-      text-align: left;
-    }
-    .menu-item img {
-      height: 180px;
-      object-fit: cover;
-      border-radius: 10px;
-      margin-bottom: 15px;
-    }
-    .menu-item h3 {
-      margin-bottom: 8px;
-      font-size: 1.2rem;
-    }
-    .menu-item p {
-      color: #666;
-      font-size: 0.95rem;
-    }
-
-    /* === Footer === */
-    footer {
-      background: #222;
-      color: #ddd;
-      text-align: center;
-      padding: 40px 20px;
-    }
-    footer p {
-      margin-bottom: 8px;
-      font-size: 0.9rem;
-    }
-    footer a {
-      color: #c0392b;
-      transition: color 0.3s;
-    }
-    footer a:hover {
-      color: #e74c3c;
-    }
-
-    /* === Responsive === */
-    @media (max-width: 768px) {
-      .hero h1 {
-        font-size: 2.2rem;
-      }
-      .about-container {
-        flex-direction: column;
-      }
-      .menu-items {
-        flex-direction: column;
-        align-items: center;
-      }
-    }
-  </style>
 </head>
 <body>
 
- @section('content')
+@section('content')
  <br>
  <br>
  <!-- Hero Section -->
@@ -232,36 +67,37 @@
       </div>
     </div>
   </section>
-      <!--  section 6 FAQ -->
+
+  <!--  section 6 FAQ -->
     <section id="faq">
         <div class="faq wrapper">
             <div class="container">
                 <div class="row">
                     <div class="col-sm-12">
                         <div class="text-center pb-4">
-                            <h2>Frequently Asked Questions</h2>
+                            <h2>Preguntas más frecuentes</h2>
                         </div>
                     </div>
                 </div>
                 <div class="row pt-5">
                     <div class="col-sm-6 mb-4">
-                        <h4><span>~</span>Question 1?</h4>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates recusandae, aspernatur unde ex harum totam minima quas consectetur. Tempora earum laborum dolor maxime perferendis sint rerum fugiat dolorem cupiditate numquam.</p>
+                          <h4><span></span>¿Es necesario hacer reserva?</h4>
+                        <p>Recomendamos reservar especialmente los fines de semana y festivos para asegurar disponibilidad. Aun así, aceptamos clientes sin reserva según el aforo del momento.</p>
                     </div>
 
                     <div class="col-sm-6 mb-4">
-                        <h4><span>~</span>Question 2?</h4>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates recusandae, aspernatur unde ex harum totam minima quas consectetur. Tempora earum laborum dolor maxime perferendis sint rerum fugiat dolorem cupiditate numquam.</p>
+                        <h4>¿Qué opciones tienen para personas con alergias o intolerancias?</h4>
+                        <p>Nuestro personal puede informarte de los alérgenos de cada plato. También ofrecemos alternativas sin gluten, sin lactosa y sin frutos secos.</p>
                     </div>
 
                     <div class="col-sm-6 mb-4">
-                        <h4><span>~</span>Question 3?</h4>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates recusandae, aspernatur unde ex harum totam minima quas consectetur. Tempora earum laborum dolor maxime perferendis sint rerum fugiat dolorem cupiditate numquam.</p>
+                        <h4>¿Aceptan mascotas?</h4>
+                        <p>En la terraza sí permitimos mascotas. En el interior, depende de la normativa vigente o de si el restaurante dispone de zona pet-friendly.</p>
                     </div>
 
                     <div class="col-sm-6 mb-4">
-                        <h4><span>~</span>Question 4?</h4>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates recusandae, aspernatur unde ex harum totam minima quas consectetur. Tempora earum laborum dolor maxime perferendis sint rerum fugiat dolorem cupiditate numquam.</p>
+                      <h4>¿Se puede modificar un plato?</h4>
+                        <p>En la mayoría de los casos sí, siempre que la receta lo permita. Consulta al camarero para adaptaciones o cambios.</p>
                     </div>
                 </div>
             </div>
@@ -271,8 +107,12 @@
   <!-- Footer -->
   <footer>
     <p>&copy; 2025 La Bella Cucina. All rights reserved.</p>
-    <p><a href="#about">About</a> | <a href="#menu">Menu</a> | <a href="#contact">Contact</a></p>
+    <p><a href="#about">About</a> | <a href="{{route('menu')}}">Menu</a> | <a href="{{route('contact.create')}}">Contact</a></p>
+    <p>Número de teléfono xxxxxxxxx</p>
+    <p>Dirección c/Asturias San Roque</p>
+    <p>Horario</p>
   </footer>
-  @endsection
+@endsection
+
 </body>
 </html>

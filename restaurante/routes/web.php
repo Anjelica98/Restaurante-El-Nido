@@ -24,10 +24,8 @@ Route::get(('/home'), function () {
 Route::get('/guest', function () {
     return view('guest');
 })->name('guest');
-//ruta del menu del restaurante
-Route::get('/menu', function () {
-    return view('menu');
-})->name('menu');
+//ruta del menu para el cliente
+Route::get('/menu', [ItemController::class,'menuShow'])->name('menu'); //17/10/25 ruta funciona
 
 //ruta del cliente para crear una reserva
 Route::get('/reserve', [ReservationController::class, 'create'])->name('reservation'); //17/10/25 ruta funciona

@@ -15,7 +15,17 @@ class ItemController extends Controller
         $items = Item::all();
         return view('items.index', compact('items')); //returna todos los items de un restaurante (menu)
     }
+    
+    public function menuShow(Request $request){
+         $categories = Item::select('category')->distinct()->pluck('category');
+         // Fetch items, filtered by category if one is selected
+        $items = Item::when($request->category, function($query) use ($request) {
+            return $query->where('category', $request->category);
+        })->orderBy('name')->get();
 
+        return view('menu', compact('categories', 'items'));
+    }
+    
     /**
      * Show the form for creating a new resource.
      */
