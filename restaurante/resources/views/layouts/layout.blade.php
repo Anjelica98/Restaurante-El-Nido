@@ -29,6 +29,9 @@
                     <li class="nav-item">
                         <a class="nav-link" href="{{ url('/orders') }}">Orders</a>
                     </li>
+                        <li class="nav-item">
+                        <a class="nav-link" href="{{ route('reservations.index') }}">Reservations</a>
+                    </li>  
                 </ul>
                 <div>
                     <a href="{{ route('logout') }}" class="btn btn-outline-light"

@@ -10,7 +10,10 @@ class ReservationController extends Controller
         return view('reservation');   //vista que returna formulario de reserva
     }
 
-
+    public function index(){
+        $reservations = Reservation::all();
+        return view('reservationlist', compact('reservations'));
+    }
     // guardando el formulario 
     public function store(Request $request)
     {
@@ -23,7 +26,7 @@ class ReservationController extends Controller
 
         Reservation::create($validated);
 
-        return redirect()->route('reservation')->with('success', 'Your reservation has been submitted! We’ll confirm soon.');
+        return redirect()->route('reservation')->with('success', 'Your reservation has been submitted! We will confirm soon.');
     }
 
 
