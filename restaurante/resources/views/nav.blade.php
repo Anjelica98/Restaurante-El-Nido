@@ -15,13 +15,13 @@
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
       <div class="navbar-nav">
         <a class=" nav-link active center" aria-current="page" href="{{ route('guest') }}">Home</a>
-        <a class=" text-center nav-link" href="{{ route('contact.create') }}">Contacto</a>
-        <a class="text-center nav-link " href="{{ route('private') }}">Privado</a>
-        <a class=" text-center nav-link" href="{{ route('reservation') }}">Reservar</a>
-        <a class=" text-center nav-link" href="{{ route('menu') }}">Menu</a>
+        <a class=" nav-link" href="{{ route('contact.create') }}">Contacto</a>
+        <a class="nav-link " href="{{ route('private') }}">Privado</a>
+        <a class="nav-link" href="{{ route('reservation') }}">Reservar</a>
+        <a class="nav-link" href="{{ route('menu') }}">Menu</a>
       </div>
     </div>
   </div>

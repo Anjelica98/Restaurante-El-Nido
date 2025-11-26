@@ -1,0 +1,54 @@
+
+
+
+      .title-container {
+        background: #ffffff;
+        border-radius: 12px;
+        padding: 10px 25px; /* menor altura */
+        box-shadow: 0 3px 10px rgba(0,0,0,0.05); /* sombra suave */
+        display: inline-block; /* tamaño perfecto */
+    }
+
+     .btn-home {
+        background: #4a76fd;
+        color: #fff;
+        padding: 6px 12px;    /* más pequeño */
+        border-radius: 8px;
+        border: none;
+        font-size: 0.85rem;   /* letra pequeña */
+        font-weight: 500;
+        display: inline-flex; /* no ocupa bloque */
+        align-items: center;
+        gap: 4px;
+        text-decoration: none;
+        transition: 0.25s ease;
+        white-space: nowrap;  /* no se rompe el texto */
+    }
+
+    .btn-home:hover {
+        background: #325ffd;
+        text-decoration: none;
+        box-shadow: 0 3px 8px rgba(0,0,0,0.12);
+        transform: translateY(-1px);
+    }
+
+ .menu-container {
+        background: #ffffff;
+        border-radius: 16px;
+        padding: 40px 30px;
+        box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+    }
+    
+    /* Espacio entre tarjetas */
+    .menu-card {
+        transition: transform .2s ease, box-shadow .2s ease;
+    }
+
+    .menu-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 8px 28px rgba(0,0,0,0.12);
+    }
+
+    body {
+        background-color: hsl(44, 70%, 78%)!important;
+    }

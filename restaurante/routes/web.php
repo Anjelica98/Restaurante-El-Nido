@@ -7,9 +7,13 @@ use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\ItemController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\ReservationController;
-Route::get('/', function () {
+/*Route::get('/', function () {
     return view('welcome');
-});
+});*/
+
+Route::get('/', function () {
+    return view('guest');
+})->name('guest');
 //ruta que conduce al login para no tener los botones de regsitro
 Route::get('/private', function(){
     return view('private');
@@ -31,6 +35,8 @@ Route::get('/menu', [ItemController::class,'menuShow'])->name('menu'); //17/10/2
 Route::get('/reserve', [ReservationController::class, 'create'])->name('reservation'); //17/10/25 ruta funciona
 Route::post('/reserve', [ReservationController::class, 'store'])->name('reservations.store');
 Route::get('/reservations', [ReservationController::class, 'index'])->name('reservations.index');
+Route::get('/reservations', [ReservationController::class, 'edit'])->name('reservations.edit');
+Route::get('/reservations', [ReservationController::class, 'destroy'])->name('reservations.destroy');
 //ruta de contacto con la empresa
 Route::get('/contacto',[contactFormController::class,'create'])->name('contact.create');
 Route::post('/contacto',[contactFormController::class,'store'])->name('contact.store');

@@ -1,0 +1,14 @@
+body {
+    background:
+     linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),url(https://cdn.pixabay.com/photo/2020/10/27/09/44/macarons-5690175_1280.jpg) !important;
+    
+}
+
+.btn{
+    background-color: lab(66.32% 30.72 71.13) !important;
+    border: none !important;
+}
+
+.btn:hover{
+    background-color: hsl(41, 75%, 76%) !important;
+}

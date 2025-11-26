@@ -97,19 +97,6 @@
 
 
 
-
-             <!-- Card 4 --> <!--posiblemente de las reservas-->
-            <div class="col-md-4">
-                <div class="card">
-                    <img src="{{ asset('images/burger.jpg') }}" class="card-img-top" alt="Card 2">
-                    <div class="card-body">
-                        <h5 class="card-title">Items</h5>
-                        <p class="card-text">Browse and manage reservations offered by your restaurant.</p>
-                        <a href="{{ url('/reservations') }}" class="btn btn-primary">Manage Item</a>
-                    </div>
-                </div>
-            </div>
-
             <!-- Card 3 -->
             <div class="col-md-4">
                 <div class="card">

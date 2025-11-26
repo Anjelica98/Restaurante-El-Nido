@@ -28,8 +28,8 @@
                     
                     
                     <td>
-                        <a href="{{ route('customers.edit', $res->id) }}" class="btn btn-warning">Edit</a>
-                        <form action="{{ route('customers.destroy', $res->id) }}" method="POST" style="display:inline;">
+                        <a href="{{ route('reservations.edit', $res->id) }}" class="btn btn-warning">Edit</a>
+                        <form action="{{ route('reservations.destroy', $res->id) }}" method="POST" style="display:inline;">
                             @csrf
                             @method('DELETE')
                             <button type="submit" class="btn btn-danger">Delete</button>

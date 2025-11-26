@@ -29,8 +29,19 @@ class ReservationController extends Controller
         return redirect()->route('reservation')->with('success', 'Your reservation has been submitted! We will confirm soon.');
     }
 
+    public function edit(Reservation $res){
+          return view('editRes', compact('res'));
+    }
+    
+    public function update(Request $request, Reservation $res){
+         $res->update($request->only([ 'name', 'phone', 'guest_count', 'reservation_time', 'status' ]));
+        return redirect()->route('reservations.index')->with('success', 'Reservation updated successfully.');
+    }
 
-
+    public function destroy(Reservation $res){
+        $res->delete();
+            return redirect()->route('reservations.index')->with('success', 'Releted deleted successfully!');
+    } 
 
 }
 

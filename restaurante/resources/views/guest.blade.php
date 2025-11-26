@@ -21,7 +21,7 @@
     <div class="hero-content">
       <h1>El Nido</h1>
       <p>Comida cásera , nutre tu alma</p>
-      <a href="#menu">Haz una reserva</a>
+      <a href="{{ route('reservation') }}">Haz una reserva</a>
     </div>
   </section>
 
@@ -29,7 +29,8 @@
   <section class="about" id="about">
     <div class="about-container">
       <div class="about-img">
-        <img src="https://images.unsplash.com/photo-1600891963931-96053a2d2e48?auto=format&fit=crop&w=800&q=80" alt="About our restaurant">
+        <!--<img src="https://images.unsplash.com/photo-1600891963931-96053a2d2e48?auto=format&fit=crop&w=800&q=80" alt="About our restaurant">--->
+        <img src="https://images.unsplash.com/photo-1622115837997-90c89ae689f9?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"></image>
       </div>
       <div class="about-text">
         <h2>Sobre Nosotros</h2>
@@ -111,8 +112,14 @@
     <p>Número de teléfono xxxxxxxxx</p>
     <p>Dirección c/Asturias San Roque</p>
     <p>Horario</p>
+    <div class="footer-social pt--4 text-center">
+                        <a href="https://www.facebook.com/?locale=es_ES"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://x.com/?lang=es"><i class="fab fa-twitter"></i></a>  
+                        <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+    </div>
   </footer>
 @endsection
 
+    <script src="https://kit.fontawesome.com/04111552cb.js" crossorigin="anonymous"></script> 
 </body>
 </html>
