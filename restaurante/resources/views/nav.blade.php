@@ -26,7 +26,7 @@
     </div>
   </div>
 </nav>
-{{-- Page Content --}}
+<!--contenido de página , no se incluye el nav-->
     <div class="container">
         @yield('content')
     </div>

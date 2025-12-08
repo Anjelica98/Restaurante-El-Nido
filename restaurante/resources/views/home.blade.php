@@ -9,7 +9,7 @@
     <style>
         /* Custom CSS for Banner */
         .banner {
-            background: url('{{ asset("images/banner.jpg") }}') no-repeat center center;
+            background: url('https://images.unsplash.com/photo-1538333581680-29dd4752ddf2?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center;
             background-size: cover;
             height: 300px;
             display: flex;
@@ -21,6 +21,7 @@
     </style>
 </head>
 <body>
+    
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
@@ -105,6 +106,20 @@
                         <h5 class="card-title">Orders</h5>
                         <p class="card-text">Track and manage order efficiently and seamlessly.</p>
                         <a href="{{ url('/orders') }}" class="btn btn-primary">Manage Order</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Card 3 -->
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="{{ asset('images/order.jpg') }}" class="card-img-top" alt="Card 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Reservations</h5>
+                        <p class="card-text">Track and manage order efficiently and seamlessly.</p>
+                        <p class="card-text">{{$reservationsCount}}</p>
+                        <a href="{{ url('/reservations') }}" class="btn btn-primary">Manage Reservations</a>
                     </div>
                 </div>
             </div>

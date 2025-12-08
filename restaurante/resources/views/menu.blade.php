@@ -67,7 +67,6 @@
 
     </div>
 </div>
-  <button ><a href="{{ url('/guest') }}">Volver</a></button>
     <script src="https://kit.fontawesome.com/04111552cb.js" crossorigin="anonymous"></script> 
 </body>
 </html>

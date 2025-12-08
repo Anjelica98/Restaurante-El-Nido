@@ -2,7 +2,7 @@
 
 
       .title-container {
-        background: #ffffff;
+        background: white;
         border-radius: 12px;
         padding: 10px 25px; /* menor altura */
         box-shadow: 0 3px 10px rgba(0,0,0,0.05); /* sombra suave */
@@ -50,5 +50,5 @@
     }
 
     body {
-        background-color: hsl(44, 70%, 78%)!important;
+        background-color:  #f8d7da important;
     }

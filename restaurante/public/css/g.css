@@ -7,7 +7,7 @@
       font-family: 'Poppins', sans-serif;
       color: #333;
       line-height: 1.6;
-      background-color: orange !important;
+      background-color:#f5f1ec!important;
     }
     a {
       text-decoration: none;
@@ -53,7 +53,7 @@
       margin-bottom: 2rem;
     }
     .hero a {
-      background: #c0392b;
+      background:#c2955f;
       padding: 12px 28px;
       border-radius: 30px;
       color: white;
@@ -61,7 +61,7 @@
       transition: background 0.3s ease;
     }
     .hero a:hover {
-      background: #a93226;
+      background: hsl(5, 54%, 69%);
     }
 
     /* === About Section === */
@@ -175,4 +175,30 @@
     font-size: 1.5rem;
     color: var(--white-color);
     padding: 0 1rem;
+}
+
+.faq-item {
+  padding: 1rem;               /* asegura espacio interior */
+  box-sizing: border-box;
+  align-items: flex-start;     /* sitúa contenido al inicio (arriba) */
+  overflow: hidden;            /* evita que hijos sobresalgan visualmente */
+  word-break: normal;
+}
+
+.faq-item .faq-question,
+.faq-item h5 {
+  margin: 0 0 0.5rem 0;        /* elimina márgenes superiores inesperados */
+  line-height: 1.2;
+  overflow-wrap: break-word;   /* quiebra palabras largas */
+  word-wrap: break-word;
+  hyphens: auto;
+}
+
+.faq-item .faq-answer {
+  margin: 0;
+}
+
+/* Si el texto sigue rompiendo el diseño, limita el tamaño de fuente en móviles */
+@media (max-width: 420px) {
+  .faq-item .faq-question { font-size: 0.95rem; }
 }

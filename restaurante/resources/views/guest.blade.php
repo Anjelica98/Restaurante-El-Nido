@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="{{ asset('css/guest.css') }}" rel="stylesheet" />  
+    <link href="{{ asset('css/g.css') }}" rel="stylesheet" />  
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
     <title>HOME GUEST | LANDING PAGE FOR CLIENTS</title>
@@ -21,7 +21,7 @@
     <div class="hero-content">
       <h1>El Nido</h1>
       <p>Comida cásera , nutre tu alma</p>
-      <a href="{{ route('reservation') }}">Haz una reserva</a>
+      <a  class="text-decoration-none"   href="{{ route('reservation') }}">Haz una reserva</a>
     </div>
   </section>
 
@@ -53,8 +53,8 @@
     <div class="menu-items">
       <div class="menu-item">
         <img src="https://images.unsplash.com/photo-1603133872878-684f208fb84b?auto=format&fit=crop&w=600&q=80" alt="Pasta">
-        <h3>Truffle Tagliatelle</h3>
-        <p>Handmade pasta tossed in a creamy truffle sauce.</p>
+        <h3> Tagliatelle de Trufa</h3>
+        <p>Pasta hecha a mano en salsa de trufas y trozos de setas.</p>
       </div>
       <div class="menu-item">
         <img src="https://images.unsplash.com/photo-1625944227283-bd4669a6d18d?auto=format&fit=crop&w=600&q=80" alt="Pizza">
@@ -63,55 +63,62 @@
       </div>
       <div class="menu-item">
         <img src="https://images.unsplash.com/photo-1604909053272-6dfb8b7a0b5f?auto=format&fit=crop&w=600&q=80" alt="Dessert">
-        <h3>Tiramisu</h3>
-        <p>A perfect finish: espresso-soaked ladyfingers with mascarpone cream.</p>
+        <h3>Tiramisú</h3>
+        <p>Un acabado perfecto.Tiramisú clásico con una fusión para amantes de oreo crujiente</p>
       </div>
     </div>
   </section>
 
   <!--  section 6 FAQ -->
-    <section id="faq">
+      <section id="faq">
         <div class="faq wrapper">
             <div class="container">
                 <div class="row">
-                    <div class="col-sm-12">
-                        <div class="text-center pb-4">
-                            <h2>Preguntas más frecuentes</h2>
-                        </div>
+                    <div class="col-12 text-center pb-4">
+                        <h2>Preguntas más frecuentes</h2>
                     </div>
                 </div>
-                <div class="row pt-5">
-                    <div class="col-sm-6 mb-4">
-                          <h4><span></span>¿Es necesario hacer reserva?</h4>
-                        <p>Recomendamos reservar especialmente los fines de semana y festivos para asegurar disponibilidad. Aun así, aceptamos clientes sin reserva según el aforo del momento.</p>
+
+                <div class="row pt-5 g-4">
+                    <div class="col-sm-6 col-lg-3">
+                        <div class="faq-item p-4">
+                            <h5 class="faq-question">¿Es necesario hacer reserva?</h5>
+                            <p class="faq-answer mb-0">Recomendamos reservar especialmente los fines de semana y festivos para asegurar disponibilidad. Aun así, aceptamos clientes sin reserva según el aforo del momento.</p>
+                        </div>
                     </div>
 
-                    <div class="col-sm-6 mb-4">
-                        <h4>¿Qué opciones tienen para personas con alergias o intolerancias?</h4>
-                        <p>Nuestro personal puede informarte de los alérgenos de cada plato. También ofrecemos alternativas sin gluten, sin lactosa y sin frutos secos.</p>
+                    <div class="col-sm-6 col-lg-3">
+                        <div class="faq-item p-4">
+                            <h5 class="faq-question">¿Qué opciones para alergias o intolerancias?</h5>
+                            <p class="faq-answer mb-0">Nuestro personal puede informarte de los alérgenos de cada plato. También ofrecemos alternativas sin gluten, sin lactosa y sin frutos secos cuando es posible.</p>
+                        </div>
                     </div>
 
-                    <div class="col-sm-6 mb-4">
-                        <h4>¿Aceptan mascotas?</h4>
-                        <p>En la terraza sí permitimos mascotas. En el interior, depende de la normativa vigente o de si el restaurante dispone de zona pet-friendly.</p>
+                    <div class="col-sm-6 col-lg-3">
+                        <div class="faq-item p-4">
+                            <h5 class="faq-question">¿Aceptan mascotas?</h5>
+                            <p class="faq-answer mb-0">En la terraza sí permitimos mascotas. En el interior depende de la normativa vigente y de la disponibilidad de zonas pet‑friendly.</p>
+                        </div>
                     </div>
 
-                    <div class="col-sm-6 mb-4">
-                      <h4>¿Se puede modificar un plato?</h4>
-                        <p>En la mayoría de los casos sí, siempre que la receta lo permita. Consulta al camarero para adaptaciones o cambios.</p>
+                    <div class="col-sm-6 col-lg-3">
+                        <div class="faq-item p-4">
+                            <h5 class="faq-question">¿Se puede modificar un plato?</h5>
+                            <p class="faq-answer mb-0">En la mayoría de los casos sí, siempre que la receta lo permita. Consulta al camarero para adaptar ingredientes o alérgenos.</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+    
 
   <!-- Footer -->
   <footer>
-    <p>&copy; 2025 La Bella Cucina. All rights reserved.</p>
-    <p><a href="#about">About</a> | <a href="{{route('menu')}}">Menu</a> | <a href="{{route('contact.create')}}">Contact</a></p>
+    <p>&copy; ❤2025 El Nido  -- Barranco Anjela</p>
     <p>Número de teléfono xxxxxxxxx</p>
     <p>Dirección c/Asturias San Roque</p>
-    <p>Horario</p>
+    <p>Horario A partir de las 12:00 hasta las 00:00 -- Miercóles cerrado</p>
     <div class="footer-social pt--4 text-center">
                         <a href="https://www.facebook.com/?locale=es_ES"><i class="fab fa-facebook-f"></i></a>
                         <a href="https://x.com/?lang=es"><i class="fab fa-twitter"></i></a>  

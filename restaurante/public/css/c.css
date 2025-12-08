@@ -1,6 +1,7 @@
 body {
-            background: linear-gradient(135deg, #ff7e5f, #feb47b);
+            background: linear-gradient(135deg, #e0c7c0, #feb47b);
             padding-top: 50px;
+
         }
         .card {
             border-radius: 10px;
@@ -12,10 +13,12 @@ body {
             margin-bottom: 1.5rem;
         }
         .btn-primary {
-            background-color: #ff6f61;
-            border-color: #ff6f61;
+            background-color: #ff6f61 !important;
+            border-color: #ff6f61 !important;
         }
         .btn-primary:hover {
             background-color: #e85c50;
             border-color: #e85c50;
         }
+
+        

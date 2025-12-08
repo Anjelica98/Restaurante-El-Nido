@@ -14,29 +14,37 @@
                 <h4 class="mb-0">Edit Reservation</h4>
             </div>
             <div class="card-body">
-                <form action="{{ route('reservations.update', $res->id) }}" method="POST">
+                <form action="{{ route('reservations.update',$reservation->id)}}" method="POST">
                     @csrf
                     @method('PUT')
 
-
                     <div class="mb-3">
                         <label for="name" class="form-label">Name:</label>
-                        <input type="text" id="name" name="name" value="{{ $item->name }}" class="form-control" placeholder="Enter Name" required>
+                        <input type="text" id="name" name="name" value="{{ $reservation->name }}" class="form-control" placeholder="Enter Name" required>
                     </div>
 
-                    <div class="mb-3">
-                        <label for="category" class="form-label">Category:</label>
-                        <input type="text" id="category" name="category" value="{{ $item->category }}" class="form-control" placeholder="Enter Category" required>
-                    </div>
+                      <div class="mb-3">
+                            <label for="phone" class="form-label">Phone</label>
+                            <input type="text" name="phone" id="phone" value="{{$reservation->phone}}" class="form-control" placeholder="Enter phone" required>
+                            
+                        </div>
+                            <div class="mb-3">
+                            <label for="guest_count" class="form-label">Number of Guests</label>
+                            <input type="number" name="guest_count" id="guest_count" value="{{ $reservation->guest_count}}" min="1" class="form-control" required>
+                           
+                        </div>
 
-                    <div class="mb-3">
-                        <label for="price" class="form-label">Price:</label>
-                        <input type="number" id="price" name="price" value="{{ $item->price}}" class="form-control" placeholder="Enter Price of menu item" required>
+                             <div class="mb-3">
+                            <label for="reservation_time" class="form-label">Reservation Time</label>
+                            <input type="datetime-local" name="reservation_time" id="reservation_time" value="{{ $reservation->reservation_time}}" class="form-control" required>
+                            
+                        </div>
+                         <div class="mb-3">
+                        <label for="status" class="form-label">Status</label>
+                        <input type="text" id="status" name="status" value="{{ $reservation->status}}" class="form-control" placeholder="Confirm Status" required>
                     </div>
-
-                    
                     <div class="text-end">
-                        <button type="submit" class="btn btn-success">Update Item</button>
+                        <button type="submit" class="btn btn-success">Update Reservation</button>
                         <a href="{{ route('reservations.index') }}" class="btn btn-secondary">Cancel</a>
                     </div>
                 </form>

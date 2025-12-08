@@ -7,6 +7,7 @@ use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\ItemController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\ReservationController;
+use App\Models\Reservation;
 /*Route::get('/', function () {
     return view('welcome');
 });*/
@@ -19,8 +20,9 @@ Route::get('/private', function(){
     return view('private');
 })->name('private');
 
-Route::get(('/home'), function () {
-    return view('home');     //función que retorna la vista home.blade.php, que es la página principal del admin
+Route::get(('/home'), function () {     //función que retorna la vista home.blade.php, que es la página principal del admin
+$reservationsCount = Reservation::count();
+ return view('home', compact('reservationsCount'));     //función que retorna la vista home.blade.php, que es la página principal del admin
 })->middleware(['auth'])->name('home');
 
 
@@ -32,11 +34,13 @@ Route::get('/guest', function () {
 Route::get('/menu', [ItemController::class,'menuShow'])->name('menu'); //17/10/25 ruta funciona
 
 //ruta del cliente para crear una reserva
+Route::get('/reservations', [ReservationController::class, 'index'])->name('reservations.index');
 Route::get('/reserve', [ReservationController::class, 'create'])->name('reservation'); //17/10/25 ruta funciona
 Route::post('/reserve', [ReservationController::class, 'store'])->name('reservations.store');
-Route::get('/reservations', [ReservationController::class, 'index'])->name('reservations.index');
-Route::get('/reservations', [ReservationController::class, 'edit'])->name('reservations.edit');
-Route::get('/reservations', [ReservationController::class, 'destroy'])->name('reservations.destroy');
+Route::get('/reservations/{reservation}/edit', [ReservationController::class, 'edit'])->name('reservations.edit');
+Route::put('/reservations/{reservation}', [ReservationController::class, 'update'])->name('reservations.update');
+Route::delete('/reservations/{reservation}', [ReservationController::class, 'destroy'])->name('reservations.destroy');
+
 //ruta de contacto con la empresa
 Route::get('/contacto',[contactFormController::class,'create'])->name('contact.create');
 Route::post('/contacto',[contactFormController::class,'store'])->name('contact.store');
