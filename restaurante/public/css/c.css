@@ -1,6 +1,7 @@
 body {
             background: linear-gradient(135deg, #e0c7c0, #feb47b);
-            padding-top: 50px;
+            padding-top:0;
+            margin:0;
 
         }
         .card {
@@ -21,4 +22,16 @@ body {
             border-color: #e85c50;
         }
 
-        
+   .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    background: transparent !important;
+    box-shadow: none;
+}
+
+.content-with-navbar {
+    padding-top: 70px; /* adjust to match your navbar height */
+}

@@ -72,24 +72,24 @@
     <div class="container card-container mt-4">
         <div class="row">
             <!-- Card 1 -->
-            <div class="col-md-4">
+           
+                         <div class="col-md-4">
                 <div class="card">
-                <img src="{{ asset('images/customer.jpg') }}" class="card-img-top" alt="Card 1">
+                <img src="https://cdn.pixabay.com/photo/2020/07/20/05/22/reservation-5421878_960_720.jpg" class="card-img-top" alt="Card 1">
 
                     <div class="card-body">
-                        <h5 class="card-title">Customers</h5>
-                        <p class="card-text">Manage all customer information efficiently.</p>
-                        <a href="{{ url('/customers') }}" class="btn btn-primary">Manage Customer</a>
+                        <h5 class="card-title">Reservations</h5>
+                        <p class="card-text font-italic">{{$reservationsCount}} Reservations</p>
+                        <a href="{{ url('/reservations') }}" class="btn btn-primary">Manage Reservations</a>
                     </div>
                 </div>
             </div>
-
             <!-- Card 2 -->
             <div class="col-md-4">
                 <div class="card">
-                    <img src="{{ asset('images/burger.jpg') }}" class="card-img-top" alt="Card 2">
+                    <img src="https://cdn.pixabay.com/photo/2019/06/18/18/01/bruschetta-4282901_1280.jpg" class="card-img-top" alt="Card 2">
                     <div class="card-body">
-                        <h5 class="card-title">Items</h5>
+                        <h5 class="card-title font-bold">Items</h5>
                         <p class="card-text">Browse and manage items offered by your restaurant.</p>
                         <a href="{{ url('/items') }}" class="btn btn-primary">Manage Item</a>
                     </div>
@@ -101,7 +101,7 @@
             <!-- Card 3 -->
             <div class="col-md-4">
                 <div class="card">
-                    <img src="{{ asset('images/order.jpg') }}" class="card-img-top" alt="Card 3">
+                    <img src="https://cdn.pixabay.com/photo/2020/09/28/16/05/cash-register-5610295_1280.jpg" class="card-img-top" alt="Card 3">
                     <div class="card-body">
                         <h5 class="card-title">Orders</h5>
                         <p class="card-text">Track and manage order efficiently and seamlessly.</p>
@@ -111,20 +111,8 @@
             </div>
         </div>
     </div>
-    <!-- Card 3 -->
-            <div class="col-md-4">
-                <div class="card">
-                    <img src="{{ asset('images/order.jpg') }}" class="card-img-top" alt="Card 3">
-                    <div class="card-body">
-                        <h5 class="card-title">Reservations</h5>
-                        <p class="card-text">Track and manage order efficiently and seamlessly.</p>
-                        <p class="card-text">{{$reservationsCount}}</p>
-                        <a href="{{ url('/reservations') }}" class="btn btn-primary">Manage Reservations</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+   
+     
 
     <!-- Main Content -->
     <div class="container mt-5">

@@ -40,8 +40,9 @@
          con un giro y fusión únicos
         </p>
         <p>
-          Our chefs blend tradition with innovation to deliver a dining
-          experience that delights every sense.
+        
+          Nuestros chefs combinan tradición con innovación para ofrecer una experiencia culinaria que deleita todos los sentidos.
+          
         </p>
       </div>
     </div>
@@ -57,12 +58,12 @@
         <p>Pasta hecha a mano en salsa de trufas y trozos de setas.</p>
       </div>
       <div class="menu-item">
-        <img src="https://images.unsplash.com/photo-1625944227283-bd4669a6d18d?auto=format&fit=crop&w=600&q=80" alt="Pizza">
-        <h3>Margherita Pizza</h3>
-        <p>Classic Neapolitan pizza with fresh mozzarella and basil.</p>
+        <img src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?q=80&w=869&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Pizza">
+        <h3>Pizza Margarita </h3>
+        <p>pizza napolitana elaborada con tomate, mozzarella</p>
       </div>
       <div class="menu-item">
-        <img src="https://images.unsplash.com/photo-1604909053272-6dfb8b7a0b5f?auto=format&fit=crop&w=600&q=80" alt="Dessert">
+        <img src="https://images.unsplash.com/photo-1707269388230-60ceceac3e6b?q=80&w=464&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Dessert">
         <h3>Tiramisú</h3>
         <p>Un acabado perfecto.Tiramisú clásico con una fusión para amantes de oreo crujiente</p>
       </div>

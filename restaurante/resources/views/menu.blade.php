@@ -13,7 +13,7 @@
 <body>
     <div class="container py-5">
 
-    {{-- Título centrado --}}
+    {{--Título centrado--}}
     <div class="text-center mb-4">
     <div class="title-container">
     <h1 class="text-center fw-bold mb-5">Nuestro Menú</h1>
@@ -22,10 +22,10 @@
     </div>
     </div>
 
-    {{-- CONTENEDOR DIFERENCIADO --}}
+    {{--CONTENEDOR DIFERENCIADO--}}
     <div class="menu-container">
 
-        {{-- Categorías en forma de pestañas --}}
+        {{--Categorías en forma de pestañas--}}
         <ul class="nav nav-pills justify-content-center mb-4">
             <li class="nav-item">
                 <a class="nav-link {{ request('category') == null ? 'active' : '' }}" href="{{ url('/menu') }}">
@@ -43,7 +43,7 @@
             @endforeach
         </ul>
 
-        {{-- GRID DE PLATOS --}}
+        {{--PLATOS--}}
         <div class="row g-4">
             @forelse ($items as $item)
                 <div class="col-md-4">
@@ -55,7 +55,7 @@
                         </div>
 
                         <div class="card-footer d-flex justify-content-between bg-white border-0">
-                            <span class="fw-bold text-primary">${{ ($item->price) }}</span>
+                            <span class="fw-bold text-primary">€{{ ($item->price) }}</span>
                             <span class="badge bg-secondary">{{ $item->category }}</span>
                         </div>
                     </div>
